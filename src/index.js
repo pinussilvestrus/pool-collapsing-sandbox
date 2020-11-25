@@ -19,9 +19,18 @@ import variantB1 from "./B1";
 import variantB2 from "./B2";
 import variantC from "./C";
 
-const VARIANTS = [variantA, variantB1, variantB2, variantC];
+const VARIANTS = [
+  {
+    key: "0",
+    modules: []
+  },
+  variantA,
+  variantB1,
+  variantB2,
+  variantC
+];
 
-const DEFAULT_VARIANT = "A";
+const DEFAULT_VARIANT = "0";
 
 const container = dom("#container");
 
