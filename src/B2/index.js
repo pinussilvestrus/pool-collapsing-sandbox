@@ -7,6 +7,6 @@ const module = {
 };
 
 export default {
-  key: "B1",
+  key: "B2",
   modules: [module]
 };

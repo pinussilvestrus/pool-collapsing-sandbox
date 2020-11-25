@@ -12,30 +12,28 @@ import "./styles.css";
 
 import diagram from "./diagram.bpmn";
 
-import variantAModule from "./A";
+import variantA from "./A";
+import variantB1 from "./B1";
+import variantB2 from "./B2";
+import variantC from "./C";
 
-import variantB1Module from "./B1";
+const VARIANTS = [
+  variantA,
+  variantB1,
+  variantB2,
+  variantC
+];
+
+const DEFAULT_VARIANT = "A";
 
 const container = dom("#container");
 
 const variantsBadge = dom(".variant-badge");
 
-const VARIANTS = [
-  {
-    key: "A",
-    modules: [variantAModule]
-  },
-  {
-    key: "B1",
-    modules: [variantB1Module]
-  }
-];
-
-const DEFAULT_VARIANT = "A";
-
 let activeVariant = "";
 
 let modeler;
+
 
 const renderModeler = (modules = []) => {
   if (modeler) {
@@ -92,7 +90,9 @@ variantsBadge.on("click", onNextVariant);
 const variant = urlParam("variant");
 toggleVariant(variant);
 
+
 // helpers //////////
+
 function updateURL(variant) {
   const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${variant}`;
   window.history.pushState({ path: newurl }, "", newurl);
