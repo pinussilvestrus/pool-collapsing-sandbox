@@ -1,0 +1,21 @@
+{
+  "name": "prevent-pool-collapsing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "bpmn-js": "7.4.1",
+    "bpmn-js-disable-collapsed-subprocess": "0.1.2",
+    "domtastic": "0.15.12",
+    "min-dash": "3.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}

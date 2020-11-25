@@ -1,0 +1,31 @@
+html,
+body,
+#container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.variant-badge {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 90%;
+  height: 3.125rem;
+  width: 3.125rem;
+  text-align: center;
+  background-color: black;
+  color: whitesmoke;
+  user-select: none;
+  z-index: 999;
+}
+
+.variant-badge > span {
+  position: absolute;
+  right: 30%;
+  left: 30%;
+  bottom: 30%;
+}
