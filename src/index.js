@@ -1,5 +1,7 @@
 import Modeler from "bpmn-js/lib/Modeler";
 
+import DisableCollapsedSubprocessModule from "bpmn-js-disable-collapsed-subprocess";
+
 import dom from "domtastic";
 
 import { find, findIndex } from "min-dash";
@@ -45,7 +47,10 @@ const renderModeler = (modules = []) => {
     keyboard: {
       bindTo: document
     },
-    additionalModules: [...modules]
+    additionalModules: [
+      ...modules,
+      DisableCollapsedSubprocessModule
+    ]
   });
 
   modeler
