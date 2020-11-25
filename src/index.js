@@ -19,12 +19,7 @@ import variantB1 from "./B1";
 import variantB2 from "./B2";
 import variantC from "./C";
 
-const VARIANTS = [
-  variantA,
-  variantB1,
-  variantB2,
-  variantC
-];
+const VARIANTS = [variantA, variantB1, variantB2, variantC];
 
 const DEFAULT_VARIANT = "A";
 
@@ -36,7 +31,6 @@ let activeVariant = "";
 
 let modeler;
 
-
 const renderModeler = (modules = []) => {
   if (modeler) {
     modeler.destroy();
@@ -47,10 +41,7 @@ const renderModeler = (modules = []) => {
     keyboard: {
       bindTo: document
     },
-    additionalModules: [
-      ...modules,
-      DisableCollapsedSubprocessModule
-    ]
+    additionalModules: [...modules, DisableCollapsedSubprocessModule]
   });
 
   modeler
@@ -94,7 +85,6 @@ variantsBadge.on("click", onNextVariant);
 
 const variant = urlParam("variant");
 toggleVariant(variant);
-
 
 // helpers //////////
 
