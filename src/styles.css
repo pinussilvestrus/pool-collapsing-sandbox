@@ -30,6 +30,6 @@ body,
   bottom: 30%;
 }
 
-.djs-popup .entry-disabled {
-  color: #c0c0c0;
+.djs-popup .disabled {
+  color: #c0c0c0 !important;
 }

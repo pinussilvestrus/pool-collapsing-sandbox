@@ -4,7 +4,11 @@ import { isExpanded } from "bpmn-js/lib/util/DiUtil";
 
 var REPLACE_WITH_COLLAPSED = "replace-with-collapsed-pool";
 
-export default function CollapsePopupProvider(popupMenu, bpmnReplace, translate) {
+export default function CollapsePopupProvider(
+  popupMenu,
+  bpmnReplace,
+  translate
+) {
   popupMenu.registerProvider("bpmn-replace", this);
 
   this._bpmnReplace = bpmnReplace;
@@ -13,27 +17,23 @@ export default function CollapsePopupProvider(popupMenu, bpmnReplace, translate)
 
 CollapsePopupProvider.$inject = ["popupMenu", "bpmnReplace", "translate"];
 
-CollapsePopupProvider.prototype.getPopupMenuEntries = function (
-  element
-) {
+CollapsePopupProvider.prototype.getPopupMenuEntries = function (element) {
   var bpmnReplace = this._bpmnReplace,
-      translate = this._translate;
+    translate = this._translate;
 
   return function (entries) {
     if (isParticipant(element) && isExpanded(element) && hasChildren(element)) {
-      
       entries[REPLACE_WITH_COLLAPSED] = {
         label: translate("Collapsed Pool (content will be removed)"),
         actionName: "replace-with-collapsed-pool",
         className: "bpmn-icon-lane",
-        action: function() {
+        action: function () {
           bpmnReplace.replaceElement(element, {
-            type: 'bpmn:Participant',
+            type: "bpmn:Participant",
             isExpanded: false
           });
         }
       };
-
     }
 
     return entries;

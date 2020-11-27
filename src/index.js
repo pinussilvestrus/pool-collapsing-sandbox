@@ -18,6 +18,7 @@ import variantA from "./A";
 import variantB1 from "./B1";
 import variantB2 from "./B2";
 import variantC from "./C";
+import variantD from "./D";
 
 const VARIANTS = [
   {
@@ -27,7 +28,8 @@ const VARIANTS = [
   variantA,
   variantB1,
   variantB2,
-  variantC
+  variantC,
+  variantD
 ];
 
 const DEFAULT_VARIANT = "0";
