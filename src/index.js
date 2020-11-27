@@ -22,7 +22,7 @@ import variantC from "./C";
 const VARIANTS = [
   {
     key: "0",
-    modules: []
+    modules: [DisableCollapsedSubprocessModule]
   },
   variantA,
   variantB1,
@@ -50,7 +50,7 @@ const renderModeler = (modules = []) => {
     keyboard: {
       bindTo: document
     },
-    additionalModules: [...modules, DisableCollapsedSubprocessModule]
+    additionalModules: modules
   });
 
   modeler
