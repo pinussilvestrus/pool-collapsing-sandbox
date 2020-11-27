@@ -71,7 +71,10 @@ DisabledCollapsedSubprocessPopupProvider.prototype.getPopupMenuEntries = functio
       entries[REPLACE_WITH_COLLAPSED] = {
         label: "Sub Process (collapsed)",
         className: "bpmn-icon-subprocess-collapsed",
-        disabled: true
+        disabled: true,
+        title: translate(
+          "Collapsed sub processes are not well supported on execution runtime environments."
+        )
       };
 
       return entries;
