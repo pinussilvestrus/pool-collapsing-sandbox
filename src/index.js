@@ -15,10 +15,10 @@ import "./styles.css";
 import diagram from "./diagram.bpmn";
 
 import variantA from "./A";
-import variantB1 from "./B1";
-import variantB2 from "./B2";
+import variantB from "./B";
 import variantC from "./C";
 import variantD from "./D";
+import variantE from "./E";
 
 const VARIANTS = [
   {
@@ -26,10 +26,10 @@ const VARIANTS = [
     modules: [DisableCollapsedSubprocessModule]
   },
   variantA,
-  variantB1,
-  variantB2,
+  variantB,
   variantC,
-  variantD
+  variantD,
+  variantE
 ];
 
 const DEFAULT_VARIANT = "0";

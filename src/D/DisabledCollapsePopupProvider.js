@@ -30,7 +30,8 @@ DisabledCollapsePopupProvider.prototype.getPopupMenuEntries = function (
   return function (entries) {
     if (isParticipant(element) && isExpanded(element) && hasChildren(element)) {
       entries[REPLACE_WITH_COLLAPSED] = {
-        label: translate("Collapsed Pool (removes content)"),
+        label: translate("Collapsed Pool"),
+        subLabel: translate("not possible, remove content to proceed"),
         className: "bpmn-icon-lane",
         disabled: true
       };

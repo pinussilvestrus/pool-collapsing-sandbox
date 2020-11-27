@@ -1,9 +1,19 @@
-import CollapsePopupProvider from "./CollapsePopupProvider";
+import DisabledCollapsePopupProvider from "./DisabledCollapsePopupProvider";
+
+import DisabledSubprocessProvider from "./DisabledSubprocessProvider";
+
+import CustomPopupMenu from "./PopupMenu";
 
 const module = {
-  __depends__: ["popupMenu", "bpmnReplace"],
-  __init__: ["collapsePopupProvider"],
-  collapsePopupProvider: ["type", CollapsePopupProvider]
+  __depends__: ["bpmnReplace"],
+  __init__: [
+    "popupMenu",
+    "disabledCollapsePopupProvider",
+    "disabledSubprocessProvider"
+  ],
+  disabledCollapsePopupProvider: ["type", DisabledCollapsePopupProvider],
+  disabledSubprocessProvider: ["type", DisabledSubprocessProvider],
+  popupMenu: ["type", CustomPopupMenu]
 };
 
 export default {

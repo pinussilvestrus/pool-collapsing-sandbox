@@ -24,7 +24,7 @@ CollapsePopupProvider.prototype.getPopupMenuEntries = function (element) {
   return function (entries) {
     if (isParticipant(element) && isExpanded(element) && hasChildren(element)) {
       entries[REPLACE_WITH_COLLAPSED] = {
-        label: translate("Collapsed Pool (removes content)"),
+        label: translate("Convert to Black Box (removes content)"),
         actionName: "replace-with-collapsed-pool",
         className: "bpmn-icon-lane",
         action: function () {
