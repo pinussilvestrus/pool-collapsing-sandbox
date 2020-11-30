@@ -76,6 +76,9 @@ DisabledCollapsedSubprocessPopupProvider.prototype.getPopupMenuEntries = functio
         label: "Sub Process (collapsed)",
         className: "bpmn-icon-subprocess-collapsed",
         disabled: true,
+        title: translate(
+          "Collapsed sub processes are not well supported on execution runtime environments."
+        ),
         action: function (event) {
           tooltips.add({
             position: {

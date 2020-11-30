@@ -38,6 +38,9 @@ DisabledCollapsePopupProvider.prototype.getPopupMenuEntries = function (
         actionName: "replace-with-collapsed-pool",
         className: "bpmn-icon-lane",
         disabled: !!hasChildren(element),
+        title:
+          !!hasChildren(element) &&
+          translate("Pool is not empty, collapsing is therefore not possible."),
         action: function (event) {
           if (hasChildren(element)) {
             return tooltips.add({
